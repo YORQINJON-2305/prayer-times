@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="main.css">
+    <script src="main.js" defer></script>
+    <title>Namoz vaqtlari</title>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <div class="header-wrap">
+                <div class="logo-wrap">
+                    <img class="logo-img" src="./images/logo.png" alt="">
+                    <a class="logo" href="./index.html">Namoz vaqtlari</a>
+                </div>
+                <p class="week-info"></p>
+                <form class="select-form" action="#">
+                    <select class="region-select">
+                        <option value="namangan">Namangan</option>
+                        <option value="andijon">Andijon</option>
+                        <option value="toshkent">Toshkent</option>
+                        <option value="jizzax">Jizzax</option>
+                        <option value="xiva">Xiva</option>
+                        <option value="navoiy">Navoiy</option>
+                        <option value="samarqand">Samarqand</option>
+                        <option value="buxoro">Buxoro</option>
+                        <option value="qarshi">Qarshi</option>
+                        <option value="nukus">Nukus</option>
+                        <option value="guliston">Guliston</option>
+                    </select>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="time-section">
+            <div class="container">
+                <div class="time-section-wrap">
+                    <div class="region-wrap">
+                        <h2 class="region-name"></h2>
+                        <time class="time-now">21:09</time>
+                        <time class="day-info"></time>
+                    </div>
+                    <ul class="prayer-time-list">
+                                <li class="prayer-time-item">
+                                    <div class="prayer-img-wrapper">
+                                        <img class="prayer-time-img" src="./images/bomdod.png" alt="">
+                                        <strong class="prayer-time-name">Bomdod</strong>
+                                    </div>
+                                    <time class="prayer-time-text fajr">05:50</time>
+                                </li>
+                                <li class="prayer-time-item">
+                                    <div class="prayer-img-wrapper">
+                                        <img class="prayer-time-img" src="./images/quyosh.png" alt="">
+                                        <strong class="prayer-time-name">Quyosh</strong>
+                                    </div>
+                                    <time class="prayer-time-text sunrise">05:50</time>
+                                </li>
+                                <li class="prayer-time-item">
+                                    <div class="prayer-img-wrapper">
+                                        <img class="prayer-time-img" src="./images/peshin.png" alt="">
+                                        <strong class="prayer-time-name">Peshin</strong>
+                                    </div>
+                                    <time class="prayer-time-text dhuhr">05:50</time>
+                                </li>
+                                <li class="prayer-time-item">
+                                    <div class="prayer-img-wrapper">
+                                        <img class="prayer-time-img" src="./images/asr.png" alt="">
+                                        <strong class="prayer-time-name">Asr</strong>
+                                    </div>
+                                    <time class="prayer-time-text asr">05:50</time>
+                                </li>
+                                <li class="prayer-time-item">
+                                    <div class="prayer-img-wrapper">
+                                        <img class="prayer-time-img" src="./images/shom.png" alt="">
+                                        <strong class="prayer-time-name">Shom</strong>
+                                    </div>
+                                    <time class="prayer-time-text maghrib">05:50</time>
+                                </li>
+                                <li class="prayer-time-item">
+                                    <div class="prayer-img-wrapper">
+                                        <img class="prayer-time-img" src="./images/xufton.png" alt="">
+                                        <strong class="prayer-time-name">Xufton</strong>
+                                    </div>
+                                    <time class="prayer-time-text isha">05:50</time>
+                                </li>
+                            </ul>
+                    <div class="calendar-select-wrap">
+                        <div class="calendar calendar-weekly">
+                            <p class="calendar-region-name region-weekly">Namangan</p>
+                            <p class="calendar-select-info">haftalik jadval</p>
+                        </div>
+                    </div>
+                    <table class="time-table">
+                        <thead>
+                            <tr>
+                                <th>Week</th>
+                                <th>Date</th>
+                                <th>Bomdod</th>
+                                <th>Quyosh</th>
+                                <th>Peshin</th>
+                                <th>Asr</th>
+                                <th>Shom</th>
+                                <th>Xufton</th>
+                            </tr>
+                        </thead>
+                        <tbody class="table-body table-weekly"></tbody>
+                    </table>
+                    <div class="calendar-select-wrap">
+                        <div class="calendar calendar-monthly">
+                            <p class="calendar-region-name region-monthly">Namangan</p>
+                            <p class="calendar-select-info">oylik jadval</p>
+                        </div>
+                    </div>
+                    <table class="time-table">
+                        <thead>
+                        <tr>
+                            <th>Week</th>
+                            <th>Date</th>
+                            <th>Bomdod</th>
+                            <th>Quyosh</th>
+                            <th>Peshin</th>
+                            <th>Asr</th>
+                            <th>Shom</th>
+                            <th>Xufton</th>
+                        </tr>
+                        </thead>
+                        <tbody class="table-body table-monthly"></tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+
+<template class="calendar-template">
+    <tr>
+        <td class="week-table"></td>
+        <td class="date-table"></td>
+        <td class="fajr-time-table"></td>
+        <td class="sunrise-time-table"></td>
+        <td class="dhuhr-time-table"></td>
+        <td class="asr-time-table"></td>
+        <td class="maghrib-time-table"></td>
+        <td class="isha-time-table"></td>
+    </tr>
+</template>
+</body>
+</html>
